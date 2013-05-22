@@ -35,25 +35,25 @@
     rendered using dc.js are naturally data driven and reactive therefore providing instant feedback on user's
     interaction. The main objective of this project is to provide an easy yet powerful javascript library which can be
     utilized to perform data visualization and analysis in browser as well as on mobile device. For more information
-    please check out our <a href="https://github.com/NickQiZhu/dc.js/wiki">Wiki</a> and
+    please check out original<a href="https://github.com/NickQiZhu/dc.js/wiki">Wiki</a> and
     <a href="https://github.com/NickQiZhu/dc.js/wiki/API">API Reference</a>. For your questions and answers please
     try <a href="https://groups.google.com/forum/?fromgroups#!forum/dc-js-user-group">dc.js user group</a>.
 </p>
 
 <p>
-    Fork me @ <a href="https://github.com/NickQiZhu/dc.js">https://github.com/NickQiZhu/dc.js</a> and also feel free
+    This example page is forked from <a href="https://github.com/NickQiZhu/dc.js">https://github.com/NickQiZhu/dc.js</a> and also feel free
     to report any issue or request a new type of chart to be included in the next release.
 </p>
 
 <p>
-    The following charts provide a live example of dc.js used against Nasdaq 100 index for the last 27 years. (You
+    The following charts provide a live example of dc.js used against Shanghai SSE Composite Index (000001.SS) for the last 23 years. (You
     can run this example completely off-line). Although it is just an example, using it you can
-    already ask some quite interesting questions. If I am going to gamble whether Nasdaq 100 will gain or lose
+    already ask some quite interesting questions. If I am going to gamble whether Shanghai SSE Composite Index will gain or lose
     tomorrow what is my chance? Is Friday or Monday the most unlucky day for investors? Is spring better than winter to
     invest? Can you find the outliers? When did the outliers occur?
 
     Public data source
-    <a href="http://pitrading.com/free_market_data.htm" target="_blank">PiTrading.com</a>.
+    <a href="http://quotes.money.163.com/trade/lsjysj_zhishu_000001.html" target="_blank">money.163.com</a>.
 </p>
 
 <p>
@@ -63,10 +63,12 @@
     <li><a href="vc/index.html">US Venture Capital Landscape 2011 (choropleth chart, bubble chart)</a></li>
     <li><a href="crime/index.html">Major Canadian City Crime Stats 1998-2011 (bubble overlay, bar chart, line chart)</a>
     </li>
+    <li><a href="http://jeroenooms.github.io/dashboard/snack/">Snack Dashboard by Jeroen Ooms</a>
+    </li>
 </ul>
 </p>
 
-<h2>Nasdaq 100 Index 1985/11/01-2012/06/29</h2>
+<h2>Shanghai SSE Composite Index 1990/12/19-2013/05/22</h2>
 
 <div class="row">
     <div id="yearly-bubble-chart" class="dc-chart">
@@ -411,7 +413,7 @@ d3.csv("ndx.csv", function (data) {
                     .group(volumeByMonthGroup)
                     .centerBar(true)
                     .gap(0)
-                    .x(d3.time.scale().domain([new Date(1985, 0, 1), new Date(2012, 11, 31)]))
+                    .x(d3.time.scale().domain([new Date(1990, 12, 1), new Date(2013, 5, 31)]))
                     .round(d3.time.month.round)
                     .xUnits(d3.time.months)
                     .renderlet(function (chart) {
